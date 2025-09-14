@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 // Using placeholder images that should display correctly for a product page.
 const heroImages = [
   // Using reliable placeholder images. Replace these with your own high-quality hero image URLs.
-  "/images/front_carousel_img/front_img_1.jpg",
-  "/images/front_carousel_img/front_img_2.jpg",
-  "/images/front_carousel_img/front_img_3.jpg",
+  "./images/front_carousel_img/front_img_1.jpg",
+  "./images/front_carousel_img/front_img_2.jpg",
+  "./images/front_carousel_img/front_img_3.jpg",
 ];
 
 // Product data array with variations, now with more life jackets for demonstration
@@ -15,7 +15,7 @@ const allProducts = [
     name: "110L Outfitter",
     description: `Durable 110L dry bag built for rafting—keeps your gear safe, dry, and secure on multi-day adventures.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/bag/110L Outfitter.jpg",
+    image: "./images/bag/110L Outfitter.jpg",
   },
   {
     category: "Dry Bags",
@@ -23,200 +23,200 @@ const allProducts = [
     description: `Tough and spacious dry bag designed for demanding river use—keeps your 
     essentials protected from water, sand, and rough handling.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/bag/NRS Heavyduty Bills Bag black.jpg"
+    image: "./images/bag/NRS Heavyduty Bills Bag black.jpg"
   },
   {
     category: "Dry Bags",
     name: "NRS Heavyduty Bills Bag",
     description: `Rugged and reliable, the NRS Heavy-Duty Bills Bag protects your essentials from water and rough river conditions.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/bag/NRS Heavyduty Bills Bag.jpg"
+    image: "./images/bag/NRS Heavyduty Bills Bag.jpg"
   },
   {
     category: "Life Jackets",
     name: "Chinook OS Fishing PFD",
     description: `Comfortable and durable fishing PFD with multiple pockets, designed for safety and convenience on the water.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/lifeJacket/40016_03_Yellow_na_Front_062920_500x500.jpg"
+    image: "./images/lifeJacket/40016_03_Yellow_na_Front_062920_500x500.jpg"
   },
   {
     category: "Life Jackets",
     name: "Ninja Pro (Blue)",
     description: `High-performance PFD combining lightweight comfort with reliable buoyancy for all your water adventures.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/lifeJacket/Ninja Pro.jpg"
+    image: "./images/lifeJacket/Ninja Pro.jpg"
   },
   {
     category: "Life Jackets",
     name: "Ninja Pro (Black)",
     description: `Sleek and durable PFD offering lightweight comfort and dependable buoyancy for active water sports.`,
-    image: "/images/lifeJacket/Ninja Pro1.jpg"
+    image: "./images/lifeJacket/Ninja Pro1.jpg"
   },
   {
     category: "Life Jackets",
     name: "NRS Big Water V PFD",
     description: `Heavy-duty PFD designed for big water adventures, offering maximum buoyancy, durability, and comfort.`,
-    image: "/images/lifeJacket/NRS Big Water V PFD.jpg"
+    image: "./images/lifeJacket/NRS Big Water V PFD.jpg"
   },
   {
     category: "Life Jackets",
     name: "Rapid Rescuer",
     description: `Durable rescue PFD built for swift water safety, providing secure buoyancy and quick-access features for emergencies.`,
-    image: "/images/lifeJacket/Rapid Rescuer.jpg"
+    image: "./images/lifeJacket/Rapid Rescuer.jpg"
   },
   {
     category: "Helmets",
     name: "Current pro",
     description: `Durable and lightweight helmet designed for whitewater rafting and kayaking, providing maximum protection and comfort.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/Current pro.jpg"
+    image: "./images/helmets/Current pro.jpg"
   },
   {
     category: "Helmets",
     name: "Havoc Livery Helmets Black",
     description: `Sleek, durable helmet offering reliable protection and comfort for whitewater rafting and other water sports.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/Havoc Livery Helmets Black.jpg"
+    image: "./images/helmets/Havoc Livery Helmets Black.jpg"
   },
   {
     category: "Helmets",
     name: "Havoc Livery Helmets Blue",
     description: "Durable and comfortable helmet designed for whitewater rafting, providing reliable protection in every adventure.",
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/Havoc Livery Helmets Blue.jpg"
+    image: "./images/helmets/Havoc Livery Helmets Blue.jpg"
   },
   {
     category: "Helmets",
     name: "Havoc Livery Helmets White",
     description: `Lightweight and durable helmet offering dependable protection and comfort for whitewater rafting and water sports.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/Havoc Livery Helmets White.jpg"
+    image: "./images/helmets/Havoc Livery Helmets White.jpg"
   },
   {
     category: "Helmets",
     name: "Havoc Livery Helmets Yellow",
     description: `Bright, durable helmet designed for whitewater rafting, combining reliable protection with all-day comfort.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/Havoc Livery Helmets Yellow.jpg"
+    image: "./images/helmets/Havoc Livery Helmets Yellow.jpg"
   },
   {
     category: "Helmets",
     name: "NRS Havoc Livery Helmet",
     description: `Durable and lightweight helmet built for whitewater adventures, providing maximum protection and comfort.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/NRS Havoc Livery Helmet.jpg"
+    image: "./images/helmets/NRS Havoc Livery Helmet.jpg"
   },
   {
     category: "Helmets",
     name: "WRSI Current Pro Helmet",
     description: `High-performance helmet designed for whitewater rafting and kayaking, offering superior protection, comfort, and durability.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/WRSI Current Pro Helmet.jpg"
+    image: "./images/helmets/WRSI Current Pro Helmet.jpg"
   },
   {
     category: "Helmets",
     name: "WRSI PRO B",
     description: `Professional-grade helmet designed for whitewater sports, combining maximum protection, durability, and comfort.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/WRSI PRO B.jpg"
+    image: "./images/helmets/WRSI PRO B.jpg"
   },
   {
     category: "Helmets",
     name: "WRSI PRO BL",
     description: `Durable and comfortable helmet built for whitewater adventures, providing reliable protection and a secure fit.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/WRSI PRO BL.jpg"
+    image: "./images/helmets/WRSI PRO BL.jpg"
   },
   {
     category: "Helmets",
     name: "WRSI PRO WHITE",
     description: `Professional whitewater helmet offering maximum protection, durability, and comfort for all river conditions.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/helmets/WRSI PRO WHITE.jpg"
+    image: "./images/helmets/WRSI PRO WHITE.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "10mm rope",
     description: `Strong and durable 10mm rope, ideal for rafting, rescue operations, and general river use.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/10mm rope.jpg"
+    image: "./images/paddleAndRope/10mm rope.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "12mm rope",
     description: `Heavy-duty 12mm rope designed for rafting, rescue, and demanding river applications, offering strength and reliability.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/12mm rope.jpg"
+    image: "./images/paddleAndRope/12mm rope.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "Carlisle Standard Paddle",
     description: `Durable and lightweight paddle designed for rafting and kayaking, offering excellent control and performance on the water.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/Carlisle Standard Paddle.jpg"
+    image: "./images/paddleAndRope/Carlisle Standard Paddle.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "Carlisle standard",
     description: `Reliable and lightweight paddle, ideal for rafting and kayaking, providing excellent control and efficiency on the water.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/Carlisle standerd.jpg"
+    image: "./images/paddleAndRope/Carlisle standerd.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "NRS PT Guide Paddle",
     description: `High-performance guide paddle designed for precision and durability, perfect for rafting and professional river navigation.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/NRS PT Guide Paddle.jpg"
+    image: "./images/paddleAndRope/NRS PT Guide Paddle.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "NRS PTE Economy Paddle",
     description: `Lightweight and durable paddle designed for recreational rafting, offering reliable performance at an economical price.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/NRS PTE Economy Paddle.jpg"
+    image: "./images/paddleAndRope/NRS PTE Economy Paddle.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "PTE Paddle Client",
     description: `Durable and lightweight paddle designed for casual rafting and client use, providing ease of handling and reliable performance.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/PTE Paddle Client.jpg"
+    image: "./images/paddleAndRope/PTE Paddle Client.jpg"
   },
   {
     category: "Paddles & Ropes",
     name: "Standard Paddle",
     description: `Reliable and lightweight paddle suitable for rafting and kayaking, offering consistent performance and control on the water.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/paddleAndRope/Standard Paddle.jpg"
+    image: "./images/paddleAndRope/Standard Paddle.jpg"
   },
   {
     category: "Pumps",
     name: "Carlson 6 Hand Pump",
     description: `Heavy-duty hand pump designed for quickly inflating rafts and watercraft, built for efficiency and durability.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/pumps/Carlson 6 Hand Pump.jpg"
+    image: "./images/pumps/Carlson 6 Hand Pump.jpg"
   },
   {
     category: "Pumps",
     name: "Carlson 4",
     description: `Compact and durable hand pump designed for inflating rafts and watercraft quickly and efficiently.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/pumps/Carlson 4.jpg"
+    image: "./images/pumps/Carlson 4.jpg"
   },
   {
     category: "Rafts",
     name: "NRS E142 Raft (Blue)",
     description: `Durable and versatile raft designed for whitewater adventures, offering stability, performance, and comfort for all river conditions.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/raft/E142.jpg"
+    image: "./images/raft/E142.jpg"
   },
   {
     category: "Rafts",
     name: "NRS E161 Raft (Blue)",
     description: `Sturdy and spacious whitewater raft built for performance and safety, perfect for multi-person adventures on rivers.`,
     // Using a reliable placeholder image. Replace this with your own product image URL.
-    image: "/images/raft/E161.jpg"
+    image: "./images/raft/E161.jpg"
   },
 ];
 
@@ -246,7 +246,7 @@ const Header = ({ activeSection, isMenuOpen, toggleMenu, resetView }: HeaderProp
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center font-inter cursor-pointer" onClick={resetView}>
-          <img src="/images/logo/official_logo.jpg" alt="Logo" className="h-10 w-10 rounded-full mr-3 shadow-lg" />
+          <img src="./images/logo/official_logo.jpg" alt="Logo" className="h-10 w-10 rounded-full mr-3 shadow-lg" />
         <div>
           <div className="text-3xl font-extrabold tracking-wide drop-shadow-lg">Rokka Brothers</div>
           <div className="text-xs font-medium text-yellow-200 mt-1 tracking-wider">An official NRS Distributor</div>
@@ -544,7 +544,7 @@ const handleInquireClick = (productName: string) => {
             <div>
               <img 
                 // Using a reliable placeholder image. Replace this with your own image URL.
-                src="/images/logo/rokkaBrothers_Logo.jpg"
+                src="./images/logo/rokkaBrothers_Logo.jpg"
                 alt="Rokka Brothers as an NRS distributor" 
                 className="rounded-xl shadow-lg w-full"
                 loading="lazy" // Added lazy loading
@@ -678,7 +678,7 @@ const handleInquireClick = (productName: string) => {
               <div className="w-full h-64 flex justify-center items-center mb-4">
                 <img 
                   // Using a reliable placeholder image. Replace this with your own image URL.
-                  src="/images/gallery_img/nrs_bag.jpg"
+                  src="./images/gallery_img/nrs_bag.jpg"
                   alt="NRS gear on a raft" 
                   className="max-h-full max-w-full object-contain rounded-lg"
                   loading="lazy" // Added lazy loading
@@ -694,7 +694,7 @@ const handleInquireClick = (productName: string) => {
               <div className="w-full h-64 flex justify-center items-center mb-4">
                 <img 
                   // Using a reliable placeholder image. Replace this with your own image URL.
-                  src="/images/gallery_img/bag.jpg"
+                  src="./images/gallery_img/bag.jpg"
                   alt="NRS gear while kayaking" 
                   className="max-h-full max-w-full object-contain rounded-lg"
                   loading="lazy" // Added lazy loading
@@ -710,7 +710,7 @@ const handleInquireClick = (productName: string) => {
               <div className="w-full h-64 flex justify-center items-center mb-4">
                 <img 
                   // Using a reliable placeholder image. Replace this with your own image URL.
-                  src="/images/gallery_img/carlson_pump.jpg"
+                  src="./images/gallery_img/carlson_pump.jpg"
                   alt="NRS gear on a hike" 
                   className="max-h-full max-w-full object-contain rounded-lg"
                   loading="lazy" // Added lazy loading
