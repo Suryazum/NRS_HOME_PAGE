@@ -577,7 +577,16 @@ const handleInquireClick = (productName: string) => {
                     <h3 className="text-3xl font-semibold text-gray-800">{category}</h3>
                     {categoryProducts.length > 3 && (
                       <button
-                        onClick={() => setSelectedCategory(category)}
+                        onClick={() => {
+                          setSelectedCategory(category);
+                          // Give the DOM a moment to update before scrolling
+                          requestAnimationFrame(() => {
+                            const categorySection = document.getElementById('products'); // Target the products section
+                            if (categorySection) {
+                              categorySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                          });
+                        }}
                         className="py-2 px-4 rounded-full text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 transition-all duration-300"
                       >
                         View All {category} &rarr;
